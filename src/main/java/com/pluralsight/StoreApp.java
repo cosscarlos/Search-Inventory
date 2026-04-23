@@ -1,5 +1,6 @@
 import com.pluralsight.Product;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,6 +28,25 @@ public class StoreApp {
 
 
                 try(FileReader fileReader = new FileReader("inventory.csv")){
+                    BufferedReader bufReader = new BufferedReader(fileReader);
+
+                    String line;
+
+
+                    while((line = bufReader.readLine()) != null){
+
+                        String [] tokens = line.split("\\|");
+                        // Storing the data in the parameters.
+                        int id = Integer.parseInt(tokens[0]);
+                        String name = tokens[0];
+                        float price = Float.parseFloat(tokens[0]);
+
+
+                    }
+
+
+
+
 
                 }catch(IOException e){
 
