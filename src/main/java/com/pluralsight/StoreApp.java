@@ -1,4 +1,7 @@
 import com.pluralsight.Product;
+
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,6 +23,15 @@ public class StoreApp {
         inventory.add(new Product(3, "Keyboard", 1400.00f));
         inventory.add(new Product(4, "Microphone", 1800.00f));
         inventory.add(new Product(5, "Drums", 4000.00f));
+
+
+
+                try(FileReader fileReader = new FileReader("inventory.csv")){
+
+                }catch(IOException e){
+
+
+        }
 
 
 
